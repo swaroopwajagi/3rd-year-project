@@ -1,0 +1,36 @@
+img{
+    width:200px;
+    height:300px;
+
+}
+.card-img-top{
+    padding:25px;
+    padding-bottom: 10px;
+}
+ul{
+    list-style: none;
+    margin-left:-30px;
+}
+li{
+    font-size: 18px;
+    
+}
+.card{
+    height:530px;
+}
+.container{
+    margin-top:65px;
+}
+.card:hover{
+    box-shadow: 10px 10px 10px -7px #888888,
+    -10px -10px 10px -7px #888888;
+}
+#maths{
+    width:200px;
+    position:relative;
+    padding:15px;
+    display:inline;
+    top: 30px;
+    left: 20px;
+    text-decoration: underline;
+}

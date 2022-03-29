@@ -1,0 +1,23 @@
+.container{
+    margin-top:50px;
+    
+    width:500px;
+    
+}
+.form-group input{
+    width:400px;
+}
+.form-group textarea{
+    width:400px;
+}
+.col-md-6 button{
+    width:400px;
+    margin-top: 30px;
+}
+.container h4{
+    margin-top: -40px;
+    font-size: 40px;
+}
+.row{
+    margin-top: 20px;
+}

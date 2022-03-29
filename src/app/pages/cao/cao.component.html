@@ -1,0 +1,35 @@
+<button class="btn btn-primary" data-toggle="modal" data-target="#mymodal">Upload</button>
+<div id="mymodal" class="modal">
+    <div class="modal-dialog"  >
+        <div class="modal-content" style="padding:20px;">
+            <label for="">Verification Key</label>
+            <input type="text" class="form-control mt-5" #key value="" >
+            <button class="btn btn-danger mt-3" (click)="verify(key.value)">verify</button>
+        </div>
+    </div>
+</div>
+<div *ngIf= "a==0012; else elseBlock" id="verification">
+    <form  #myform="ngForm" (ngSubmit)="getdata(myform.value)">
+        <div class="form-group">
+            <label for="">image Url</label>
+            <input type="text" class="form-control" ngModel name="image">
+        </div>
+        <div class="form-group">
+            <label for="">Author name</label>
+            <input type="text" class="form-control" ngModel name="author">
+        </div>
+        <div class="form-group">
+            <label for="">Price</label>
+            <input type="text" class="form-control" ngModel name="price">
+        </div>
+        <button>Submit</button>
+    </form>
+</div>
+<ng-template #elseBlock>
+    plz enter a valid key
+</ng-template>
+
+<div>
+    
+{{display}}
+</div>

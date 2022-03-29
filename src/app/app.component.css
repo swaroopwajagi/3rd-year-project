@@ -1,0 +1,32 @@
+li a:hover{
+    color:black!important;
+    background-color: aliceblue;
+   
+    border: #0062FF solid 1px;
+    
+}
+
+
+.navbar{
+    height:70px;
+}
+.container-fluid{
+    height:50px;
+}
+h3{
+    margin-top: -10px;
+}
+ul{
+    margin-top:0px;
+
+}
+.navbar-brand{
+    margin-bottom: 15px;
+}
+#img1{
+    height:50px;
+    width:60px;
+}
+.navbar-brand h4{
+    display: inline;
+}
