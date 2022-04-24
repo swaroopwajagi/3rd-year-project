@@ -5,7 +5,9 @@ li a:hover{
     border: #0062FF solid 1px;
     
 }
-
+body{
+    background-color: black;;
+}
 
 .navbar{
     height:70px;

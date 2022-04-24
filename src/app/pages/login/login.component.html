@@ -1,21 +1,29 @@
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6 card p-5">
-            <h3>Welcome Back</h3>
-            <div [ngClass]="alertClass" role="alert">
-                {{alertMessage}}
+
+
+<div class="bg-info vw-100 vh-100">
+    <div class="container  ">
+        <div class="row justify-content-center">
+            <div class="col-md-6 card p-5 mt-5 shadow shadow-lg">
+                <h3>Welcome Back</h3>
+                <div [ngClass]="alertClass" role="alert">
+                    {{alertMessage}}
+                </div>
+                <form [formGroup]="loginForm">
+                    <div class="form-group">
+                        <label for="description1">Email</label>
+                        <input type="email" class="form-control" formControlName="email" id="description1" placeholder="enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Password</label>
+                        <input type="password" class="form-control" formControlName="password" id="description" placeholder="enter your password">
+                    </div>
+                    <button class="btn btn-warning" (click)="login()">Login Now</button>
+                </form>
             </div>
-            <form [formGroup]="loginForm">
-                <div class="form-group">
-                    <label for="description1">Email</label>
-                    <input type="email" class="form-control" formControlName="email" id="description1" placeholder="Write email here">
-                </div>
-                <div class="form-group">
-                    <label for="description">Password</label>
-                    <input type="password" class="form-control" formControlName="password" id="description" placeholder="Write password here">
-                </div>
-                <button class="btn btn-warning" (click)="login()">Login Now</button>
-            </form>
         </div>
     </div>
+    
 </div>
+
+
+

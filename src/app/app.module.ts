@@ -12,6 +12,12 @@ import { MathematicsComponent } from './mathematics/mathematics.component';
 import { CaoComponent } from './pages/cao/cao.component';
 import { CLanguageComponent } from './pages/c-language/c-language.component';
 import { PaymentpageComponent } from './paymentpage/paymentpage.component';
+import { CartComponent } from './pages/cart/cart.component';
+import { DeamComponent } from './pages/deam/deam.component';
+import { EthicsComponent } from './pages/ethics/ethics.component';
+import { DmgtComponent } from './pages/dmgt/dmgt.component';
+import { HomepageComponent } from './homepage/homepage.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,14 +27,20 @@ import { PaymentpageComponent } from './paymentpage/paymentpage.component';
     MathematicsComponent,
     CaoComponent,
     CLanguageComponent,
-    PaymentpageComponent
+    PaymentpageComponent,
+    CartComponent,
+    DeamComponent,
+    EthicsComponent,
+    DmgtComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

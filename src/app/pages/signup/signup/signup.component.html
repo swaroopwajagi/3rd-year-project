@@ -1,22 +1,24 @@
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6 card p-5">
-            <h3>Create Account</h3>
-            <form #signupform="ngForm" (ngSubmit)="signdata(signupform.value)">
-                <div class="form-group">
-                    <label for="title">Display Name</label>
-                    <input type="text" class="form-control" name="userdisplayName" id="title" ngModel placeholder="Write your name">
-                </div>
-                <div class="form-group">
-                    <label for="description">Email</label>
-                    <input type="email" class="form-control" name="useremail" id="description" ngModel placeholder="Write email here">
-                </div>
-                <div class="form-group">
-                    <label for="description">Password</label>
-                    <input type="password" class="form-control" name="userpassword" ngModel id="secret" placeholder="Write password here">
-                </div>
-                <button class="btn btn-primary btn-block">Signup</button>
-            </form>
+<div class="vh-100 bg-info">
+    <div class="container ">
+        <div class="row justify-content-center">
+            <div class="col-md-6 card p-5 mt-5 shadow shadow-lg">
+                <h3>Create Account</h3>
+                <form #signupform="ngForm" (ngSubmit)="signdata(signupform.value)">
+                    <div class="form-group">
+                        <label for="title">Display Name</label>
+                        <input type="text" class="form-control" name="userdisplayName" id="title" ngModel placeholder="Write your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Email</label>
+                        <input type="email" class="form-control" name="useremail" id="description" ngModel placeholder="Write email here">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Password</label>
+                        <input type="password" class="form-control" name="userpassword" ngModel id="secret" placeholder="Write password here">
+                    </div>
+                    <button class="btn btn-primary btn-block">Signup</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
