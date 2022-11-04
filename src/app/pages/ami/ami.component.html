@@ -1,0 +1,99 @@
+<button class="btn btn-primary float-right m-5" data-toggle="modal" data-target="#mymodal">Upload</button>
+<div id="upload1" class="modal" *ngIf="res;" >
+    <div class="modal-dialog" style="padding:20px; width: 1000px;" >
+        <div class="modal-content" style="padding:20px;">
+            <div class="modal-header">
+                <div class="lead">Book Details</div>
+            </div>
+           <div class="modal-body">
+            <form #bookdata="ngForm" (ngSubmit)="uploadata(bookdata.value)">
+            <label>Image URL</label>
+            <input type="text" value="" class="form-control mt-2" ngModel name="imageurl" >
+            <label for="">Book name</label>
+            <input type="text" class="form-control mt-2"  value="" ngModel name="bookname">
+            <label for="">Author Name</label>
+            <input type="text" class="form-control mt-2"  value="" ngModel name="author">
+            <label for="">Price</label>
+            <input type="text" class="form-control mt-2"  value="" ngModel name="price">
+            <button class="btn btn-danger mt-3"  id="auth">upload </button>
+            </form>
+           </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3" *ngFor="let item of product.data">
+            <div class="card">
+                <div class="card-header">
+                    <img src="{{item.imageurl}} "class="card-img-top">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <ul  class="list-group list-group-flush">
+                            <li class="list-group-item">Author: <input  type="text" readonly value="{{item.author}}"class="border border-light form-control" #author></li>
+                            <li class="list-group-item">Book name: <input  type="text" readonly #names value="{{item.bookname}}" class="border border-light form-control">
+                            </li>
+                            <li class="list-group-item">Book cost : <input type="text" readonly class="border border-light form-control" #prize value="{{item.price}}"></li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-block btn-info " (click)=addtocart(item)>add to cart</button>
+                    <button class="btn btn-block btn-warning " (click)= "transferprice(prize.value, names.value)" data-target="#paydetails" data-toggle="modal">
+                        pay
+                     </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="paydetails">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+              <form action="">
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" class="form-control"  value="" #name>
+
+                </div>
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="text" class="form-control" value="" #email>
+
+                </div>
+                <div class="form-group">
+                    <label for="">Address</label>
+                    <input type="text" class="form-control"  value="" #address>
+
+                </div>
+                <div class="form-group">
+                    <label for="">Book name : </label>
+                    <input type="text" class="border border-light" value="{{nameofbook}}"  #booksname>
+
+                </div>
+                <div class="form-group">
+                    <label for="">Book Price : </label>
+                    <input type="text" #prize1 class="border border-light" value="{{value}} " #prices>
+                </div>
+             
+                <button class="btn btn-block btn-info" (click)="price(prize1.value); mail(name.value,email.value, address.value, booksname.value, prices.value)">proceed to pay</button>
+
+              </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="mymodal" class="modal">
+    <div class="modal-dialog"  >
+        <div class="modal-content" style="padding:20px;">
+            <label for="">Verification Key</label>
+            <input type="password" class="form-control mt-5"  value="" id="pin" #key>
+            <button class="btn btn-danger mt-3" (click)="verify(key.value)" id="verify" data-dismiss="modal" data-toggle="modal" data-target="#upload1">verify </button>
+        </div>
+    </div>
+</div>

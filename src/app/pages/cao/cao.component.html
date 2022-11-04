@@ -10,10 +10,10 @@
                 <div class="card-body">
                     <div class="card-title">
                         <ul  class="list-group list-group-flush">
-                            <li class="list-group-item">Author: <input  type="text" readonly value="{{item.author}}"class="border border-light" #author></li>
-                            <li class="list-group-item">Book name: <input  type="text" readonly #names value="{{item.bookname}}" class="border border-light">
+                            <li class="list-group-item">Author: <input readonly  type="text" readonly value="{{item.author}}"class="border border-light" #author></li>
+                            <li class="list-group-item">Book name: <input readonly type="text" readonly #names value="{{item.bookname}}" class="border border-light">
                             </li>
-                            <li class="list-group-item">Book cost : <input type="text" readonly class="border border-light" #prize value="{{item.price}}"></li>
+                            <li class="list-group-item">Book cost : <input readonly type="text" readonly class="border border-light" #prize value="{{item.price}}"></li>
                             
                             
                         </ul>
@@ -70,7 +70,7 @@
     <div class="modal-dialog"  >
         <div class="modal-content" style="padding:20px;">
             <label for="">Verification Key</label>
-            <input type="text" class="form-control mt-5"  value="" id="pin" #key>
+            <input type="password" class="form-control mt-5"  value="" id="pin" #key>
             <button class="btn btn-danger mt-3" (click)="verify(key.value)" id="verify" data-dismiss="modal" data-toggle="modal" data-target="#upload">verify </button>
         </div>
     </div>
